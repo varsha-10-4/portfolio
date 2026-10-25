@@ -24,14 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2. Sticky Glassmorphism Header on Scroll
   const header = document.getElementById("header");
+  let scrollTicking = false;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    },
+    { passive: true },
+  );
 
   // 3. Active Nav Link Highlighting via Intersection Observer
   const sections = document.querySelectorAll("section");

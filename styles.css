@@ -2,6 +2,14 @@ html, body {
   overflow-x: hidden;
 }
 
+.case-studies,
+.creatives,
+#testimonials,
+.brand-audit {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
 /* CSS Variables */
 :root {
   --bg-color: #f9f6f0;

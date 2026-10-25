@@ -12,14 +12,26 @@
       content="fashion marketing, brand strategy, influencer marketing, portfolio"
     />
     <title>Varsha Shidling - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="styles.min.css" as="style" />
+    <link rel="preload" as="image" href="./assets/optimized/varsha-main.webp" />
+    <link rel="stylesheet" href="styles.min.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <!-- Open Graph (LinkedIn/Facebook) -->
     <meta property="og:title" content="Varsha Shidling - Portfolio" />
     <meta
@@ -94,12 +106,18 @@
           </div>
         </div>
         <div class="hero-image-wrapper">
-          <img
-            src="./assets/varsha-main.jpeg"
-            alt="Varsha Shidling"
-            class="hero-img"
-            draggable="false"
-          />
+          <picture>
+            <source srcset="./assets/optimized/varsha-main.webp" type="image/webp" />
+            <img
+              src="./assets/varsha-main.jpeg"
+              alt="Varsha Shidling"
+              class="hero-img"
+              draggable="false"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
           <div class="experience-badge">
             <span class="exp-number">3+</span>
             <span class="exp-text">Years Experience</span>
@@ -156,13 +174,17 @@
           </div>
         </div>
         <div class="about-image">
-          <img
-            src="./assets/marketers-meet.jpg"
-            alt="Marketers meeting"
-            class="rounded-img"
-            loading="lazy"
-            draggable="false"
-          />
+          <picture>
+            <source srcset="./assets/optimized/marketers-meet.webp" type="image/webp" />
+            <img
+              src="./assets/marketers-meet.jpg"
+              alt="Marketers meeting"
+              class="rounded-img"
+              loading="lazy"
+              draggable="false"
+              decoding="async"
+            />
+          </picture>
         </div>
       </div>
 
@@ -176,23 +198,23 @@
           </p>
           <div class="pill-container">
             <!-- Desktop logos -->
-            <img class="brand-logo desktop-only" src="./assets/L1.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L2.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L3.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L4.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L5.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L6.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L7.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo desktop-only" src="./assets/L8.png" alt="Brand" loading="lazy" draggable="false" />
+            <img class="brand-logo desktop-only" src="./assets/L1.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L2.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L3.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L4.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L5.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L6.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L7.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo desktop-only" src="./assets/L8.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
             <!-- Mobile logos -->
-            <img class="brand-logo mobile-only" src="./assets/L1.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L2.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L3.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L4.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L5.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L6.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L7.png" alt="Brand" loading="lazy" draggable="false" />
-            <img class="brand-logo mobile-only" src="./assets/L8.png" alt="Brand" loading="lazy" draggable="false" />
+            <img class="brand-logo mobile-only" src="./assets/L1.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L2.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L3.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L4.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L5.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L6.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L7.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
+            <img class="brand-logo mobile-only" src="./assets/L8.png" alt="Brand" loading="lazy" draggable="false" decoding="async" />
           </div>
         </div>
       </div>
@@ -269,18 +291,26 @@
         </div>
 
         <div class="audit-images">
-          <img
-            src="./assets/bliss-club-1.jpg"
-            alt="BlissClub Audit 1"
-            class="rounded-img"
-            loading="lazy"
-          />
-          <img
-            src="./assets/bliss-club-2.jpg"
-            alt="BlissClub Audit 2"
-            class="rounded-img"
-            loading="lazy"
-          />
+          <picture>
+            <source srcset="./assets/optimized/bliss-club-1.webp" type="image/webp" />
+            <img
+              src="./assets/bliss-club-1.jpg"
+              alt="BlissClub Audit 1"
+              class="rounded-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <picture>
+            <source srcset="./assets/optimized/bliss-club-2.webp" type="image/webp" />
+            <img
+              src="./assets/bliss-club-2.jpg"
+              alt="BlissClub Audit 2"
+              class="rounded-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </div>
 
         <div class="audit-cards">
@@ -369,14 +399,17 @@
         <div class="case-study-row">
           <div class="cs-image">
             <video
-              src="./assets/mothers-day-video.mp4"
               class="rounded-img"
+              poster="./assets/optimized/mothers-day-video-poster.webp"
               muted
               loop
               autoplay
               playsinline
               preload="none"
-            ></video>
+            >
+              <source src="./assets/optimized/mothers-day-video.webm" type="video/webm" />
+              <source src="./assets/optimized/mothers-day-video.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="cs-content">
             <div class="caps text-rust">🏵️ CAMPAIGN</div>
@@ -415,57 +448,80 @@
           </div>
           <div class="cs-image">
             <video
-              src="./assets/A&R%20Summer%20Video%20Portrait%20.mp4"
               class="rounded-img"
+              poster="./assets/optimized/AR-summer-poster.webp"
               muted
               loop
               autoplay
               playsinline
               preload="none"
-            ></video>
+            >
+              <source src="./assets/optimized/A&R%20Summer%20Video%20Portrait%20.webm" type="video/webm" />
+              <source src="./assets/optimized/A&R%20Summer%20Video%20Portrait%20.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
         <div class="spring-summer-gallery">
           <div class="gallery-row">
-            <img
-              src="./assets/spring-summer-1.JPG"
-              alt="Spring Summer 1"
-              class="rounded-img"
-              loading="lazy"
-              draggable="false"
-            />
-            <img
-              src="./assets/spring-summer-2.JPG"
-              alt="Spring Summer 2"
-              class="rounded-img"
-              loading="lazy"
-              draggable="false"
-            />
+            <picture>
+              <source srcset="./assets/optimized/spring-summer-1.webp" type="image/webp" />
+              <img
+                src="./assets/spring-summer-1.JPG"
+                alt="Spring Summer 1"
+                class="rounded-img"
+                loading="lazy"
+                draggable="false"
+                decoding="async"
+              />
+            </picture>
+            <picture>
+              <source srcset="./assets/optimized/spring-summer-2.webp" type="image/webp" />
+              <img
+                src="./assets/spring-summer-2.JPG"
+                alt="Spring Summer 2"
+                class="rounded-img"
+                loading="lazy"
+                draggable="false"
+                decoding="async"
+              />
+            </picture>
           </div>
           <div class="gallery-row full">
-            <img
-              src="./assets/spring-summers-5.JPG"
-              alt="Spring Summer 5"
-              class="rounded-img"
-              loading="lazy"
-              draggable="false"
-            />
+            <picture>
+              <source srcset="./assets/optimized/spring-summers-5.webp" type="image/webp" />
+              <img
+                src="./assets/spring-summers-5.JPG"
+                alt="Spring Summer 5"
+                class="rounded-img"
+                loading="lazy"
+                draggable="false"
+                decoding="async"
+              />
+            </picture>
           </div>
           <div class="gallery-row">
-            <img
-              src="./assets/spring-summer-3.JPG"
-              alt="Spring Summer 3"
-              class="rounded-img"
-              loading="lazy"
-              draggable="false"
-            />
-            <img
-              src="./assets/spring-summer-4.JPG"
-              alt="Spring Summer 4"
-              class="rounded-img"
-              loading="lazy"
-              draggable="false"
-            />
+            <picture>
+              <source srcset="./assets/optimized/spring-summer-3.webp" type="image/webp" />
+              <img
+                src="./assets/spring-summer-3.JPG"
+                alt="Spring Summer 3"
+                class="rounded-img"
+                loading="lazy"
+                draggable="false"
+                decoding="async"
+              />
+            </picture>
+            <picture>
+              <source srcset="./assets/optimized/spring-summer-4.webp" type="image/webp" />
+              <img
+                src="./assets/spring-summer-4.JPG"
+                alt="Spring Summer 4"
+                class="rounded-img"
+                loading="lazy"
+                draggable="false"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -485,13 +541,17 @@
 
         <div class="events-grid-layout">
           <div class="events-img">
-            <img
-              src="./assets/events-1.jpg"
-              alt="Event representation"
-              class="rounded-img"
-              loading="lazy"
-              draggable="false"
-            />
+            <picture>
+              <source srcset="./assets/optimized/events-1.webp" type="image/webp" />
+              <img
+                src="./assets/events-1.jpg"
+                alt="Event representation"
+                class="rounded-img"
+                loading="lazy"
+                draggable="false"
+                decoding="async"
+              />
+            </picture>
           </div>
           <div class="events-list-clean">
             <div class="event-item-clean">
@@ -558,48 +618,60 @@
           <div class="reels-grid">
             <div class="reel-item">
               <video
-                src="./assets/AW26-story-(1).mp4"
                 class="reel-media"
                 muted
                 loop
                 autoplay
                 playsinline
                 preload="none"
-              ></video>
+              >
+                <source src="./assets/optimized/AW26-story-(1).webm" type="video/webm" />
+                <source src="./assets/optimized/AW26-story-(1).mp4" type="video/mp4" />
+              </video>
             </div>
             <div class="reel-item">
               <video
-                src="./assets/AW26-story-(2).mp4"
                 class="reel-media"
+                poster="./assets/optimized/AW26-2-poster.webp"
                 muted
                 loop
                 autoplay
                 playsinline
                 preload="none"
-              ></video>
+              >
+                <source src="./assets/optimized/AW26-story-(2).webm" type="video/webm" />
+                <source src="./assets/optimized/AW26-story-(2).mp4" type="video/mp4" />
+              </video>
             </div>
             <div class="reel-item">
+            <picture>
+              <source srcset="./assets/optimized/AW26-story-3.webp" type="image/webp" />
               <img
                 src="./assets/AW26-story-3.jpg"
                 class="reel-media"
                 alt="AW26 story"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
               />
+            </picture>
             </div>
             <div class="reel-item">
               <video
-                src="./assets/AW26-story-4.mp4"
                 class="reel-media"
                 muted
                 loop
                 autoplay
                 playsinline
                 preload="none"
-              ></video>
+              >
+                <source src="./assets/optimized/AW26-story-4.webm" type="video/webm" />
+                <source src="./assets/optimized/AW26-story-4.mp4" type="video/mp4" />
+              </video>
             </div>
             <div class="reel-item">
               <video
-                src="./assets/AW26-story2-5.mp4"
+                src="./assets/optimized/AW26-story2-5.mp4"
                 class="reel-media"
                 muted
                 loop
@@ -722,6 +794,6 @@
       </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.min.js" defer></script>
   </body>
 </html>
